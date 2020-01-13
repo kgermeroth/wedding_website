@@ -1,3 +1,4 @@
+/* nav bar items*/
 .nav-link {
     color: white;
     margin-bottom: 0;
@@ -5,26 +6,46 @@
     font-size: 24px;
     font-weight: bold;
 }
-
 .brand {
 	font-size: 36px;
 	font-family: 'Amatic SC', cursive;
 	font-weight: bold;
 }
-
 #navbar {
     background-color: #c28285;
     align-items: center;
 }
-
 .fade-in-color:hover {
 	color: #d3d3d3;
 }
 .dropdown-item.fade-in-color:hover {
 	color: #c28285;
 }
-
 .nav-item {
 	display: inline;
 	color: white;
+}
+
+/* header image main page*/
+.header-text-bucket {
+	color: #c28285;
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.header-text-main {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 60px;
+}
+
+.header-text-sub {
+	font-family: 'Amatic SC', cursive;
+	font-size: 36px;
+	font-weight: bold;
+}
+.header-area {
+	position: relative;
 }
