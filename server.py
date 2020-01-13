@@ -1,6 +1,6 @@
 
 from jinja2 import StrictUndefined
-from flask import Flask, render_template, request, redirect, flash, session, jsonify, Markup
+from flask import Flask, render_template, request, redirect, flash, session, jsonify, Markup, send_from_directory
 from flask_debugtoolbar import DebugToolbarExtension
 import os
 
@@ -11,6 +11,12 @@ app.secret_key = os.environ['WEDDING_SECRET_KEY']
 
 # gives an error in jinga template if undefined variable rather than failing silently
 app.jinja_env.undefined = StrictUndefined
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.png', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/')
